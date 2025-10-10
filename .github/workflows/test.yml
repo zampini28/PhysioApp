@@ -45,7 +45,7 @@ jobs:
       - name: Run tests
         run: flutter test --coverage --test-randomize-ordering-seed random
 
-      - name: Update coverage to Codecov
+      - name: Display Coverage Summary
         if: matrix.os == 'ubuntu-latest'
         run: |
           echo "========== Flutter Test Summary =========="
