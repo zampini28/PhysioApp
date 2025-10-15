@@ -12,8 +12,6 @@ void handlerUncaughtError(Object error, StackTrace stackTrace) {
   );
 
   if (kDebugMode) {
-    FlutterError.presentError(
-      FlutterErrorDetails(exception: error, stack: stackTrace),
-    );
+    FlutterError.presentError(FlutterErrorDetails(exception: error, stack: stackTrace));
   }
 }

@@ -7,9 +7,6 @@ Future<void> configureFlutterErrorHandler() async {
     if (kDebugMode) {
       FlutterError.dumpErrorToConsole(details);
     }
-    Zone.current.handleUncaughtError(
-      details.exception,
-      details.stack ?? StackTrace.empty,
-    );
+    Zone.current.handleUncaughtError(details.exception, details.stack ?? StackTrace.empty);
   };
 }
